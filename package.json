@@ -20,8 +20,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index",
-    "start": "npm run start-mongodb && cross-env NODE_ENVIRONMENT=production node index",
-    "start-mongodb": "mongodb-runner start --topology=standalone --name=todos --port=27230"
+    "start": "cross-env NODE_ENVIRONMENT=production node index",
+    "start-dev": "npm run start-mongodb && cross-env NODE_ENVIRONMENT=production node index",
+    "start-mongodb": "mongodb-runner start --topology=standalone --name=test --port=27230",
+    "stop-mongodb": "mongodb-runner stop"
   },
   "dependencies": {
     "@koa/cors": "^2.2.1",
