@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "nodemon index",
     "start": "npm run start-mongodb && cross-env NODE_ENVIRONMENT=production node index",
-    "start-mongodb": "mongodb-runner start"
+    "start-mongodb": "mongodb-runner start --topology=standalone --name=todos --port=27230"
   },
   "dependencies": {
     "@koa/cors": "^2.2.1",

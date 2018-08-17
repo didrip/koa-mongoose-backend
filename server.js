@@ -41,6 +41,6 @@ app.use(router.allowedMethods())
 // mongoose.connect('mongodb://username:pwd@ds247141.mlab.com:47141/database-name')
 
 // remote local mongoDB (mongodb-runner)
-mongoose.connect('mongodb://localhost:27017/test')
+mongoose.connect('mongodb://localhost:27230/test')
 
 module.exports = app
