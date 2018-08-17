@@ -46,3 +46,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Deploy
+
+### on now zeit
+
+`now secrets add mongodb-user your-username`
+`now secrets add mongodb-password your-password`
+`now -e MONGO_DB_USER=@mongodb-user -e MONGO_DB_PASSWORD=@mongodb-password`

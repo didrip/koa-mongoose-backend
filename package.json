@@ -20,10 +20,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index",
-    "start": "cross-env NODE_ENVIRONMENT=production node index",
-    "start-dev": "npm run start-mongodb && cross-env NODE_ENVIRONMENT=production node index",
-    "start-mongodb": "mongodb-runner start --topology=standalone --name=test --port=27230",
-    "stop-mongodb": "mongodb-runner stop"
+    "start": "cross-env NODE_ENVIRONMENT=production node index"
   },
   "dependencies": {
     "@koa/cors": "^2.2.1",
@@ -36,7 +33,6 @@
     "koa-respond": "^1.0.1",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
-    "mongodb-runner": "^4.0.0",
     "mongoose": "^5.2.8"
   },
   "devDependencies": {

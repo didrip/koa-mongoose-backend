@@ -38,20 +38,18 @@ app.use(require('koa-static')('./build'))
 app.use(router.allowedMethods())
 
 // Connect to Mongodb
-var dbUsername = process.env.MONGO_DB_USERNAME || 'username'; //
-var dbPassword = process.env.MONGO_DB_PASSWORD || 'password'; //
-var dbHost = process.env.MONGODB_SERVICE_HOST || 'ds247141.mlab.com'; //localhost
-var dbPort = process.env.MONGODB_SERVICE_PORT || '47141'; //27230
-var dbName = process.env.MONGO_DB_DATABASE || 'node-full-stack-tuto'; //test
-
+var dbUsername = process.env.MONGO_DB_USER;
+var dbPassword = process.env.MONGO_DB_PASSWORD;
+var dbHost = process.env.MONGODB_SERVICE_HOST;
+var dbPort = process.env.MONGODB_SERVICE_PORT;
+var dbName = process.env.MONGO_DB_DATABASE;
 var connectionString = 'mongodb://' + dbUsername + ':' + dbPassword +'@' + dbHost + ':' + dbPort + '/' + dbName;
-
 console.log('---DATABASE PARAMETERS---');
-console.log('Host: ' + host);
-console.log('Port: ' + port);
-console.log('Username: ' + username);
-console.log('Database: ' + database);
-
-mongoose.connect(connectionString)
+console.log('Host: ' + dbHost);
+console.log('env host' + process.env.MONGODB_SERVICE_HOST);
+console.log('Port: ' + dbPort);
+console.log('Username: ' + dbUsername);
+console.log('Database: ' + dbName);
+mongoose.connect(connectionString);
 
 module.exports = app
