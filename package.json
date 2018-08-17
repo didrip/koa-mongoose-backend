@@ -20,7 +20,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index",
-    "start": "cross-env NODE_ENVIRONMENT=production node index",
+    "start": "npm run start-mongodb && cross-env NODE_ENVIRONMENT=production node index",
     "start-mongodb": "mongodb-runner start"
   },
   "dependencies": {
